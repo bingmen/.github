@@ -29,7 +29,7 @@
 
 ## 🌐 链接
 
-- 官网：[bingmen.com](https://bingmen.com)
-- GitHub 组织：[github.com/bingmen](https://github.com/bingmen)
+- 🏠 官网：[bingmen.com](https://bingmen.com)
+- 🐙 GitHub 组织：[github.com/bingmen](https://github.com/bingmen)
 
-© 2026 · BINGMEN · 冰门
+© 2026 · BINGMEN · 冰门  ⚡ 由 GitHub Pages 驱动
