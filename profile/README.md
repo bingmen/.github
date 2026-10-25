@@ -36,3 +36,7 @@
 
 - 官网：[bingmen.com](https://bingmen.com)
 - GitHub 组织：[github.com/bingmen](https://github.com/bingmen)
+
+---
+
+© 2026 · BINGMEN · 冰门
