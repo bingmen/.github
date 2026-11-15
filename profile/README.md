@@ -2,8 +2,6 @@
 
 > 用代码连接美好，续写无限可能。
 
-以下 AI 生成 + 手动修改，部分内容夸大其词。
-
 冰门是一个专注于实用工具与数据归档的开源组织。
 
 我们相信用代码可以连接美好，持续维护轻量、可靠、易用的项目。
@@ -40,5 +38,7 @@
 
 - 🏠 官网：[bingmen.com](https://bingmen.com)
 - 🐙 GitHub 组织：[github.com/bingmen](https://github.com/bingmen)
+
+ℹ️ 此页面 AI 生成 + 手动修改，部分内容夸大其词
 
 © 2026 · BINGMEN · 冰门  ⚡ 由 GitHub Pages 驱动
