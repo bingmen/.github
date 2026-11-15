@@ -20,28 +20,46 @@ jobs:
       - name: Checkout .github repository
         uses: actions/checkout@v4
         with:
-          path: source
+          path: dotgithub
 
       - name: Checkout <org>.github.io repository
         uses: actions/checkout@v4
         with:
           repository: ${{ github.repository_owner }}.github.io
           token: ${{ secrets.README }}
-          path: target
+          path: pages
 
-      - name: Copy README.md
+      - name: Copy profile/README.md to .github/README.md
         run: |
-          cp source/profile/README.md target/README.md
+          mkdir -p dotgithub/.github
+          cp dotgithub/profile/README.md dotgithub/.github/README.md
 
-      - name: Commit and push
+      - name: Copy profile/README.md to <org>.github.io/README.md
         run: |
-          cd target
+          cp dotgithub/profile/README.md pages/README.md
+
+      - name: Commit and push .github repository
+        run: |
+          cd dotgithub
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .github/README.md
+          if git diff --cached --quiet; then
+            echo "No changes to commit in .github repo"
+          else
+            git commit -m "chore: sync profile/README.md to .github/README.md"
+            git push
+          fi
+
+      - name: Commit and push <org>.github.io repository
+        run: |
+          cd pages
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
           if git diff --cached --quiet; then
-            echo "No changes to commit"
+            echo "No changes to commit in .github.io repo"
           else
-            git commit -m "Sync README.md from ${{ github.repository }}"
+            git commit -m "chore: sync profile/README.md from .github"
             git push
           fi
